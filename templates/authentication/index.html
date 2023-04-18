@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!--link rel="stylesheet" type="text/css" href="homepage.css"-->
+</head>
+<body>
+    <header><h1>BASIC ELECTRICAL ENGINEERING</h1>  <hr></header>
+    <nav style="text-align: right;">
+        {% if user is None %}
+        <a href="signin">SignIn</a> 
+        <a href="signup">SignUp</a>
+        {% else %}
+        <a href="signout">SignOut</a>
+        {% endif %}
+    </nav>
+    <article>
+        <!--img src="images/pradeepy3.jpg"-->
+        <P class="sirname">YAMULA PRADEEP KUMAR</P>
+        <p>Well Come To Home Page</p>
+    </article>
+    <section>
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                <strong>message: </strong> {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+        <h3>Hello wellcome to BASIC ELECTRICAL ENGINEERING Exam</h3>
+
+        {% if user.is_authentication %}
+            <h3>hello</h3>
+            <h4>you're successfully logged in</h4>
+        {% endif %}
+
+    </section>
+
+
+
+</body>
+</html>

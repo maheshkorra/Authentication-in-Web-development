@@ -1,0 +1,33 @@
+.sirname:hover{
+color: aqua;
+font-size: 110%;
+}
+body{
+    background-color: rgb(60, 200, 235);
+}
+nav a{
+    display: inline-block;
+    background-color: rgba(247, 242, 242, 0.459);
+    text-decoration: none;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -o-border-radius:5px;
+    margin: 50px;
+    padding: 20px 0px 0px 0px;
+}
+form, article{
+    float: left;
+    display: inline;
+}
+header{
+    background-color: rgb(247, 242, 242);
+    background-image: url(flywheel.jpg);
+    text-align: center;
+    padding: 2%;
+    height: 200px;
+    color: rgb(247, 242, 242);
+    background-size: 100%;
+}

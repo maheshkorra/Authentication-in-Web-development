@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignIp</title>
+    
+    <link rel="stylesheet" type="text/css" href="signinpage.css">
+</head>
+<body>
+    <header><h1>BASIC ELECTRICAL ENGINEERING</h1>  <hr> </header>
+    <!--h1>BASIC ELECTRICAL ENGINEERING</h1--> 
+    <nav style="text-align: right;">
+        <a href="home">Home</a> 
+        <a href="signup">SignUp</a>
+    </nav>
+    <article>
+        <!--img src="images/pradeepy3.jpg"-->
+        <P class="sirname">YAMULA PRADEEP KUMAR</P>
+        <p>Well Come To SignIn Page</p>
+    </article>
+    <section>
+        
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                <strong>message: </strong> {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+
+        <form action="/index" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend>SignIn</legend>
+                <p>Username : <input type="text" name="username" required></p>
+                <p>Password : <input type="password" name="pass1" required> </p>
+                </p>
+                <button type="submit" value="SignIn">signin</button>
+            </fieldset>
+        </form>
+    </section>
+
+</body>
+</html>
